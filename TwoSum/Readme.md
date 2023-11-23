@@ -4,6 +4,6 @@ Given an array of integers nums and an integer target, return indices of the two
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-You can view the full explanation of the question on leetcode by clickig on the link below:
+You can view the full explanation of the question on leetcode by clicking on the link below:
 
  "https://leetcode.com/problems/two-sum/"
