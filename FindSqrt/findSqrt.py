@@ -1,7 +1,7 @@
 #Find Square-Root Problem
 #time complexity - O(log N), where N is the value of the given non-negative integer x.
 
-def mySqrt(x):
+def findSqrt(x):
     if x == 0 or x == 1:
         return x
     
@@ -20,7 +20,8 @@ def mySqrt(x):
             
     return right  # Returning right instead of -1 to get the floor value
 
-# Example usage:
-num = 1024
-result = mySqrt(num)
-print(f"The square root of {num} is {result}")
+
+if __name__ == "__main__":
+    num = 1024
+    result = findSqrt(num)
+    print(f"The square root of {num} is {result}")
