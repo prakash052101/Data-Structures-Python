@@ -68,10 +68,45 @@ def sortArrayM2(nums):
         size *= 2
     return nums
 
+#Method 1 - Heap Sort Algorithm
+#time complexity - O(nlogn)
+def max_heapify(arr, i, heap_size):
+    largest = i
+    left = 2 * i + 1
+    right = 2 * i + 2
+    if left < heap_size and arr[left] > arr[largest]:
+        largest = left
+
+    if right < heap_size and arr[right] > arr[largest]:
+        largest = right
+
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+        max_heapify(arr, largest, heap_size)
+
+def build_max_heap(arr):
+    heap_size = len(arr)
+    for i in range(len(arr)//2 - 1, -1, -1):
+        max_heapify(arr, i, heap_size)
+
+def HeapSort(arr):
+    heap_size = len(arr)
+    build_max_heap(arr)
+    for i in range(heap_size - 1, 0, -1):  # Update loop range
+        arr[0], arr[i] = arr[i], arr[0]
+        heap_size -= 1  # Decrement heap_size
+        max_heapify(arr, 0, heap_size)
+        
+
 
 
 if __name__ =="__main__":
     nums1 = [5, 2, 3, 1]
     nums2 = [5,1,1,2,0,0]
-    print(sortArrayM1(nums1))
-    print(sortArrayM2(nums2))
+    # Example usage:
+    arr = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
+    HeapSort(arr)
+    
+    print("The Sorted array by Merge Sort is: ", sortArrayM1(nums1))
+    print("The Sorted array by Bottom-up merge Sort is: ", sortArrayM2(nums2))
+    print("The Sorted array by Quick Sort is: ", arr)
