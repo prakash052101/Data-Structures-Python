@@ -109,4 +109,4 @@ if __name__ =="__main__":
     
     print("The Sorted array by Merge Sort is: ", sortArrayM1(nums1))
     print("The Sorted array by Bottom-up merge Sort is: ", sortArrayM2(nums2))
-    print("The Sorted array by Quick Sort is: ", arr)
+    print("The Sorted array by Heap Sort is: ", arr)
