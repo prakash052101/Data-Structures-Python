@@ -52,8 +52,27 @@ def atoiM2(s):
     return max(-2**31, min(sign * result, 2**31 - 1))  # Limit the result to 32-bit signed integer range
 
 
+#Method3 - using regex
+#time complexity - O(n), where n is the length of the input string.
+
+import re
+
+def atoiM3(s):
+    pattern = re.compile(r'^\s*([+-]?\d+)')
+    match = pattern.match(s)
+    
+    if match:
+        result = int(match.group(1))
+        return max(-2**31, min(result, 2**31 - 1))
+    else:
+        return 0
+
+
+
 if __name__ == "__main__":
     s1 = "4193 with words"
     s2 = "   -42"
+    s3 = "42"
     print("Method 1 Output: ", atoiM1(s1))
     print("Method 2 Output: ", atoiM2(s2))
+    print("Method 3 Output: ", atoiM3(s3))
