@@ -27,6 +27,7 @@ def is_isomorphic(s, t):
     return True
 
 if __name__ == "__main__":
+    
     s1 = "egg"
     t1 = "add"
     print(is_isomorphic(s1, t1))  

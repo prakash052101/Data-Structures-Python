@@ -1,4 +1,5 @@
 39. Isomorphic Strings
+
 Given two strings s and t, determine if they are isomorphic.
 
 Two strings s and t are isomorphic if the characters in s can be replaced to get t.
@@ -15,7 +16,7 @@ Output: false
 
 
 Constraints:
-    1 <= s.length <= 5 * 104
+    1 <= s.length <= 5 * 10^4
     t.length == s.length
 
 To check this problem on leetcode, click on the link given below:
